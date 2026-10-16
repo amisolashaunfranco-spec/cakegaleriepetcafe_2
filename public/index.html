@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#294c3c">
+  <meta name="description" content="A little magic, a lot of paws. Book a cozy pet café visit, explore the menu, and bring a little café happiness home. A Cake Galerie student concept.">
+  <title>Cake Galerie — A little magic. A lot of paws.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="motion.css">
+  <script src="config.js"></script>
+  <script src="assets/vendor/leaflet.js" defer></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-paw" viewBox="0 0 24 24"><path d="M7 15c1-3 2-5 5-5s4 2 5 5c2 4-2 5-5 3-3 2-7 1-5-3Z"/><ellipse cx="5" cy="8" rx="2" ry="3" transform="rotate(-25 5 8)"/><ellipse cx="10" cy="5" rx="2" ry="3"/><ellipse cx="15" cy="5" rx="2" ry="3"/><ellipse cx="20" cy="9" rx="2" ry="3" transform="rotate(25 20 9)"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 7h14l1 14H4L5 7ZM8 8V6a4 4 0 0 1 8 0v2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 8h13v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8ZM17 9h2a3 3 0 0 1 0 6h-2M7 3v2M11 3v2M15 3v2M2 23h18"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-3a8 8 0 0 1 16 0v3"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 3C5 1 1 10 6 16c7 7 16 1 14-13ZM4 21 16 9M9 16v-5M9 16h6"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 4h13v13H2V4ZM15 9h4l3 5v3h-7"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="mode-banner" hidden></div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Cake Galerie home"><span class="brand-icon brand-logo"><img src="assets/logo-mark.svg" alt="Cake Galerie Totoro logo"></span><span>Cake Galerie<small>PET CAFÉ & LITTLE JOYS</small></span></a>
+    <button class="mobile-toggle icon-btn" id="mobile-toggle" aria-label="Open navigation" aria-expanded="false"><span class="hamburger"></span></button>
+    <nav class="main-nav" aria-label="Main navigation" id="main-nav">
+      <a href="#home">Home</a><a href="#menu">Our menu</a><a href="#pets">Meet the pets</a><a href="#orders">Track order</a>
+    </nav>
+    <div class="header-actions"><button class="icon-btn bag-btn" id="open-cart" aria-label="Open basket"><svg class="icon"><use href="#i-bag"/></svg><span id="cart-count">0</span></button><button class="sign-in" id="account-button">Sign in</button><a class="btn btn-small" href="#reserve">Book a visit <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+  </header>
+  <main id="main" tabindex="-1"><div class="loading-page"><span class="eyebrow">YOUR COZY CORNER IS ALMOST READY</span><h1>A little moment…</h1></div></main>
+  <footer class="site-footer"><div><a class="footer-brand" href="#home">Cake Galerie<span>Good coffee. Gentle company.</span></a><p>1st Avenue, Tulip Drive, Matina, Davao City<br>Wednesday–Saturday · 12 noon–7 pm</p></div><div class="footer-links"><a href="#reserve">Plan your visit</a><a href="#menu">Order a little happiness</a><a href="admin.html">Café management</a><a href="https://www.ghibli.jp/works/" target="_blank" rel="noopener noreferrer">Image credits ↗</a></div><div class="footer-bottom"><span>A student project inspired by Cake Galerie. Sample menu, pets & service policies. Not the café’s official booking site.</span><span>Film stills © Studio Ghibli & respective rights holders. Unaffiliated.</span></div></footer>
+  <div class="toast-region" id="toasts" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="auth-dialog" class="modal auth-modal" aria-labelledby="auth-title"><button class="icon-btn modal-close" data-close aria-label="Close sign in"><svg class="icon"><use href="#i-close"/></svg></button><div id="auth-content"></div></dialog>
+  <dialog id="cart-dialog" class="modal cart-modal" aria-labelledby="cart-title"><div class="modal-top"><div><span class="eyebrow">A LITTLE HAPPINESS TO GO</span><h2 id="cart-title">Your basket</h2></div><button class="icon-btn" data-close aria-label="Close basket"><svg class="icon"><use href="#i-close"/></svg></button></div><div id="cart-content"></div></dialog>
+  <dialog id="checkout-dialog" class="modal checkout-modal" aria-labelledby="checkout-title"><div class="modal-top"><div><span class="eyebrow">BAKED WITH LOVE, SENT WITH CARE</span><h2 id="checkout-title">Make it yours.</h2></div><button class="icon-btn" data-close aria-label="Close checkout"><svg class="icon"><use href="#i-close"/></svg></button></div><div id="checkout-content"></div></dialog>
+  <dialog id="info-dialog" class="modal" aria-labelledby="info-title"><div class="modal-top"><h2 id="info-title">A gentle reminder</h2><button class="icon-btn" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button></div><div id="info-content"></div></dialog>
+  <noscript><p class="noscript">Please enable JavaScript to use reservations, ordering, and café management.</p></noscript>
+</body>
+</html>

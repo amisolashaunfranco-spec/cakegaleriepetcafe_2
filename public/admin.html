@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#324b3b">
+  <meta name="description" content="Cake Galerie Pet Café — reservations, menu, pets, and order management.">
+  <title>Café management · Cake Galerie</title>
+  <link rel="stylesheet" href="./admin.css">
+  <link rel="stylesheet" href="./motion.css">
+  <link rel="icon" type="image/svg+xml" href="./assets/logo-mark.svg">
+  <script src="./config.js"></script>
+  <script type="module" src="./admin.js"></script>
+</head>
+<body>
+  <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4C11 2 3 7 4 14c1 7 12 8 15-2 1-3 1-6 1-8Z"/><path d="m5 19 10-10M9 15l-1-5m5 1 5 1"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 7h14l2 14H3L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 11h18m-13 4h2m4 0h2"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 8h12v6a6 6 0 0 1-12 0V8Zm12 1h2a3 3 0 0 1 0 6h-2M3 22h15M8 2v3m5-3v3"/></symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24"><ellipse cx="5" cy="8" rx="2" ry="3"/><ellipse cx="10" cy="5" rx="2" ry="3"/><ellipse cx="16" cy="5" rx="2" ry="3"/><ellipse cx="21" cy="10" rx="2" ry="3"/><path d="M6 18c0-3 4-8 7-8s7 5 7 8-4 3-7 2-7 1-7-2Z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M2 21v-3a7 7 0 0 1 14 0v3m1-18a4 4 0 0 1 0 8m2 4a6 6 0 0 1 3 5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 15v6h16v-6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="m14 5 5 5M4 20l5-1L21 7a2 2 0 0 0-5-4L4 15l-1 6 6-2"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 4H3v16h6m0-8h12m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 8a9 9 0 1 0 0 9M20 2v6h-6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><circle cx="8" cy="8" r="2"/><path d="m2 17 6-5 4 4 4-6 6 8"/></symbol>
+  </defs></svg>
+
+  <div id="startup" class="startup" role="status"><span class="spinner"></span><p>Opening the café desk…</p></div>
+
+  <section id="auth-gate" class="auth-gate" hidden>
+    <div class="gate-scene"><a class="gate-brand" href="./index.html"><img class="gate-logo" src="./assets/logo-mark.svg" alt="Cake Galerie Totoro logo" width="60" height="72"><span class="gate-brand-copy">Cake Galerie<small>PET CAFÉ & LITTLE JOYS</small></span></a><div><span class="eyebrow">A LITTLE CARE, EVERY DAY</span><h1>Good things<br>grow together.</h1><p>A welcoming space for our guests,<br>our little companions, and our team.</p></div><span class="scene-credit">My Neighbor Totoro · ©1988 Hayao Miyazaki/Studio Ghibli</span></div>
+    <div class="gate-form"><a class="back-link" href="./index.html">← Back to the café</a><div class="auth-card"><img class="auth-logo" src="./assets/logo-mark.svg" alt="Cake Galerie Totoro logo" width="76" height="86"><span class="eyebrow">THE CAFÉ DESK</span><h2>Welcome back.</h2><p class="muted">Sign in to look after the little details.</p><div id="auth-notice"></div><form id="login-form"><label>Email address<input type="email" name="email" autocomplete="username" required placeholder="you@example.com"></label><label>Password<input type="password" name="password" autocomplete="current-password" required minlength="8" placeholder="Your password"></label><p class="form-error" id="login-error" role="alert"></p><button type="submit" class="button primary full">Sign in <svg><use href="#i-arrow"/></svg></button></form><div id="demo-credentials" class="demo-credentials" hidden><strong>Browser demo accounts</strong><p>Admin: <code>admin@cakegalerie.test</code><br>Password: <code>Admin123!</code></p><p>Staff: <code>staff@cakegalerie.test</code><br>Password: <code>Staff123!</code></p><small>Sample data stays in this browser. These are demo credentials only.</small></div></div><p class="gate-note">A student café concept. Unaffiliated with Cake Galerie or Studio Ghibli.</p></div>
+  </section>
+
+  <div id="management" hidden>
+    <div id="demo-banner" class="demo-banner" hidden><strong>Browser-local demo</strong><span>Changes are saved on this device. Use the Node server for shared data and secure accounts.</span><a href="./index.html">View café <span aria-hidden="true">↗</span></a></div>
+    <button class="sidebar-shade" id="sidebar-shade" aria-label="Close navigation" hidden></button>
+    <aside id="sidebar" class="sidebar"><a href="./index.html" class="sidebar-brand"><img class="sidebar-logo" src="./assets/logo-mark.svg" alt="Cake Galerie Totoro logo" width="45" height="55"><span>Cake Galerie<small>PET CAFÉ</small></span></a><span class="nav-caption">CAFÉ WORKSPACE</span><nav aria-label="Management pages"><button class="nav-item active" data-view="overview"><svg><use href="#i-grid"/></svg>Overview</button><button class="nav-item" data-view="orders"><svg><use href="#i-bag"/></svg>Orders<span id="order-count" class="nav-count"></span></button><button class="nav-item" data-view="reservations"><svg><use href="#i-calendar"/></svg>Reservations</button><button class="nav-item" data-view="products"><svg><use href="#i-cup"/></svg>Menu & shop</button><button class="nav-item" data-view="pets"><svg><use href="#i-paw"/></svg>Our companions</button><button class="nav-item" data-view="users" id="users-nav"><svg><use href="#i-users"/></svg>People & access</button></nav><div class="sidebar-bottom"><div class="desk-note"><svg><use href="#i-leaf"/></svg><p>A little kindness makes<br>a lovely café.</p></div><a href="./index.html" class="nav-item public-link"><svg><use href="#i-arrow"/></svg>Visit the café</a><button class="nav-item" id="logout"><svg><use href="#i-logout"/></svg>Sign out</button></div></aside>
+    <main class="workspace"><header class="topbar"><div class="topbar-left"><button class="icon-button mobile-toggle" id="mobile-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><svg><use href="#i-menu"/></svg></button><span class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb-current">Overview</strong></span></div><div class="account"><span class="online-dot"></span><span id="account-role">ADMIN</span><span class="account-avatar" id="account-avatar">A</span><span id="account-name">Team member</span></div></header><div id="page-content" class="page-content" tabindex="-1"></div><footer class="workspace-footer"><span>Cake Galerie · Pet Café</span><span>Made with care, served with a little wonder.</span></footer></main>
+  </div>
+  <dialog id="editor-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><header class="dialog-header"><div><span class="eyebrow" id="dialog-eyebrow">CAFÉ DESK</span><h2 id="dialog-title"></h2></div><button type="button" class="icon-button" id="close-dialog" aria-label="Close dialog"><svg><use href="#i-close"/></svg></button></header><div id="dialog-body"></div></div></dialog>
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

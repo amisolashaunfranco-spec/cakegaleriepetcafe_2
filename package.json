@@ -1,0 +1,14 @@
+{
+  "name": "cake-galerie-pet-cafe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pet cafe reservations, shop and administration using vanilla JavaScript and SQLite",
+  "engines": { "node": ">=24.0.0" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "demo": "node preview.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check server.mjs"
+  }
+}

@@ -1,0 +1,12 @@
+Verified 2026-10-16
+Node.js v24.19.0 on Windows
+Command: node --test tests/*.test.mjs
+Tests / subtests: 44
+Pass: 44
+Fail: 0
+Cancelled: 0
+Skipped: 0
+Todo: 0
+Backend: real HTTP integration, temporary SQLite databases.
+Demo: isolated localStorage/sessionStorage mocks.
+Map provider responses stubbed in automated tests; real Nominatim and OSRM HTTP 200 checks recorded separately in TESTING.md.

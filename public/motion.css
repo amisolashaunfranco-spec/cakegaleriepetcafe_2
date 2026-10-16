@@ -1,0 +1,88 @@
+/* Gentle, finite motion: no parallax, background loops, or image replacements. */
+:root {
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
+  --motion-duration: 620ms;
+}
+
+.motion-ready {
+  opacity: 0;
+  translate: 0 18px;
+  transition: opacity var(--motion-duration) var(--motion-ease),
+    translate var(--motion-duration) var(--motion-ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.motion-ready.motion-visible { opacity: 1; translate: 0 0; }
+.hero.fade-in { animation: none; }
+
+/* Native dialogs keep their close/focus/map cleanup behavior. Unsupported
+   browsers simply retain their usual instant open/close behavior. */
+dialog {
+  opacity: 0;
+  transform: translateY(14px) scale(.985);
+  transition: opacity 220ms ease, transform 320ms var(--motion-ease),
+    display 320ms allow-discrete, overlay 320ms allow-discrete;
+}
+dialog[open] { opacity: 1; transform: translateY(0) scale(1); }
+dialog::backdrop {
+  opacity: 0;
+  transition: opacity 240ms ease, display 320ms allow-discrete,
+    overlay 320ms allow-discrete;
+}
+dialog[open]::backdrop { opacity: 1; }
+@starting-style {
+  dialog[open] { opacity: 0; transform: translateY(14px) scale(.985); }
+  dialog[open]::backdrop { opacity: 0; }
+}
+
+.btn, .button, .add-btn, .filter-pill, .icon-btn, .icon-button,
+.nav-item, .radio-label, .slot, .sign-in {
+  transition: background-color 220ms ease, color 220ms ease,
+    border-color 220ms ease, box-shadow 220ms ease,
+    transform 280ms var(--motion-ease), scale 180ms ease;
+}
+.btn:active:not(:disabled), .button:active:not(:disabled),
+.add-btn:active:not(:disabled), .icon-btn:active:not(:disabled),
+.icon-button:active:not(:disabled) { scale: .97; }
+.text-link .icon, .btn .icon, .button > svg {
+  transition: translate 260ms var(--motion-ease);
+}
+.product-card, .pet-card, .metric {
+  transition-property: opacity, translate, transform, box-shadow, border-color;
+  transition-duration: 620ms, 620ms, 320ms, 320ms, 220ms;
+  transition-timing-function: var(--motion-ease);
+}
+.product-card.motion-ready, .pet-card.motion-ready, .metric.motion-ready {
+  transition-delay: var(--reveal-delay, 0ms), var(--reveal-delay, 0ms), 0ms, 0ms, 0ms;
+}
+.card-image-wrap { overflow: hidden; }
+.card-photo, .pet-photo > img {
+  transition: transform 700ms var(--motion-ease);
+}
+input, select, textarea {
+  transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+.toast { animation: toast-arrive 320ms var(--motion-ease) both; }
+@keyframes toast-arrive {
+  from { opacity: 0; translate: 0 12px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .product-card:hover, .pet-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px #294c3c14; }
+  .product-card:hover .card-photo, .pet-card:hover .pet-photo > img { transform: scale(1.035); }
+  .metric:hover { transform: translateY(-3px); box-shadow: 0 8px 24px #294c3c0b; }
+  .text-link:hover .icon, .btn:hover .icon, .button:hover > svg { translate: 3px 0; }
+  .wordmark, .sidebar-brand { transition: opacity 200ms ease; }
+  .wordmark:hover, .sidebar-brand:hover { opacity: .78; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .motion-ready, .motion-ready.motion-visible { opacity: 1; translate: none; }
+  dialog[open] { opacity: 1; transform: none; }
+  .product-card:hover, .pet-card:hover, .metric:hover,
+  .product-card:hover .card-photo, .pet-card:hover .pet-photo > img { transform: none; }
+  .text-link:hover .icon, .btn:hover .icon, .button:hover > svg { translate: none; }
+  .btn:active, .button:active, .add-btn:active, .icon-btn:active, .icon-button:active { scale: 1; }
+}

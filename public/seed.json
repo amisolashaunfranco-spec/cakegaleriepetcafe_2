@@ -1,0 +1,130 @@
+{
+  "products": [
+    {
+      "id": "prd-cake",
+      "name": "Jiji's Chocolate Cake",
+      "category": "Cakes",
+      "description": "A rich chocolate slice with silky ganache.",
+      "price": 185,
+      "stock": 18,
+      "image": "assets/menu-cake.jpg",
+      "available": true
+    },
+    {
+      "id": "prd-cloud",
+      "name": "Cloudberry Chiffon",
+      "category": "Cakes",
+      "description": "Light vanilla chiffon, berry compote, and a cloud of cream.",
+      "price": 175,
+      "stock": 16,
+      "image": "assets/menu-cloud.jpg",
+      "available": true
+    },
+    {
+      "id": "prd-matcha",
+      "name": "Forest Matcha Latte",
+      "category": "Drinks",
+      "description": "Earthy matcha whisked with chilled milk for a quiet afternoon.",
+      "price": 155,
+      "stock": 30,
+      "image": "assets/menu-matcha.jpg",
+      "available": true
+    },
+    {
+      "id": "prd-coffee",
+      "name": "House Iced Latte",
+      "category": "Drinks",
+      "description": "Espresso, fresh milk, and ice. A comforting café classic.",
+      "price": 140,
+      "stock": 35,
+      "image": "assets/menu-coffee.jpg",
+      "available": true
+    },
+    {
+      "id": "prd-toast",
+      "name": "Baker's Butter Toast",
+      "category": "Savory",
+      "description": "Golden toast with herb butter and a little sea salt.",
+      "price": 125,
+      "stock": 20,
+      "image": "assets/menu-toast.jpg",
+      "available": true
+    },
+    {
+      "id": "prd-sandwich",
+      "name": "Garden Picnic Sandwich",
+      "category": "Savory",
+      "description": "Fresh greens, egg, and a creamy dressing on soft bread.",
+      "price": 165,
+      "stock": 12,
+      "image": "assets/menu-sandwich.jpg",
+      "available": true
+    },
+    {
+      "id": "prd-cookie",
+      "name": "Little Forest Cookies",
+      "category": "Treats",
+      "description": "A small bag of buttery chocolate chip cookies. For people, never a pet treat.",
+      "price": 95,
+      "stock": 24,
+      "image": "assets/menu-cookie.jpg",
+      "available": true
+    },
+    {
+      "id": "prd-puff",
+      "name": "Vanilla Cream Puffs",
+      "category": "Treats",
+      "description": "Two delicate choux puffs filled with vanilla cream.",
+      "price": 135,
+      "stock": 14,
+      "image": "assets/menu-puff.jpg",
+      "available": true
+    }
+  ],
+  "pets": [
+    {
+      "id": "pet-jiji",
+      "name": "Jiji",
+      "species": "Cat",
+      "breed": "Domestic shorthair",
+      "age": 2,
+      "personality": "Quiet observer",
+      "description": "A quiet little observer who loves sunny windows and gentle company.",
+      "image": "assets/pet-jiji.jpg",
+      "available": true
+    },
+    {
+      "id": "pet-muta",
+      "name": "Muta",
+      "species": "Cat",
+      "breed": "Domestic shorthair",
+      "age": 4,
+      "personality": "Sleepy sweetheart",
+      "description": "A sleepy sweetheart who prefers unhurried visits and the coziest corners.",
+      "image": "assets/pet-muta.jpg",
+      "available": true
+    },
+    {
+      "id": "pet-yuki",
+      "name": "Yuki",
+      "species": "Cat",
+      "breed": "Domestic shorthair",
+      "age": 3,
+      "personality": "Gentle and curious",
+      "description": "A curious little friend who warms up to calm voices and slow introductions.",
+      "image": "assets/pet-yuki.jpg",
+      "available": true
+    },
+    {
+      "id": "pet-baron",
+      "name": "Baron",
+      "species": "Cat",
+      "breed": "Domestic shorthair",
+      "age": 5,
+      "personality": "Friendly little gentleman",
+      "description": "An easygoing companion with a friendly spirit and a fondness for company.",
+      "image": "assets/pet-baron.jpg",
+      "available": true
+    }
+  ]
+}
