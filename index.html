@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cake Galerie Pet Café</title>
+
+  <script>
+    const page = new URL("./public/index.html", location.href);
+    page.search = location.search;
+    page.hash = location.hash || "#home";
+    location.replace(page.href);
+  </script>
+</head>
+<body>
+  <p>Opening Cake Galerie…</p>
+  <a href="./public/index.html#home">Open the website</a>
+</body>
+</html>
